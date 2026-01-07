@@ -9,4 +9,9 @@ export const portfolioImages = [
     alt: "form-validation-project-image",
     link: "https://workdrive.zoho.com/folder/l33sw10e0d95318f4426ebed40f9bd244faac",
   },
+  {
+    src: "/portfolioProject3.png",
+    alt: "calculator-project-image",
+    link: "https://workdrive.zoho.com/folder/l33swe01d137236ff40d6ab0a174acbe22ed7",
+  },
 ];

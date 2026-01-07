@@ -7,7 +7,7 @@ const Projects = () => {
         'Show All',
         'Responsive web design',
         'Form Validation',
-        'course3',
+        'Calculator',
         'Course 4',
         'Course 5',
         'Course 6',
