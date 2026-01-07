@@ -5,9 +5,9 @@ import { portfolioImages } from '../portfolioImages'
 const Projects = () => {
     const courseNames = [
         'Show All',
-        'Course 1',
-        'Course 2',
-        'Course 3',
+        'Responsive web design',
+        'Form Validation',
+        'course3',
         'Course 4',
         'Course 5',
         'Course 6',
@@ -28,7 +28,7 @@ const Projects = () => {
                 {
                     portfolioImages.map(({ src, alt, link }, index) => {
                         return <div key={index}
-                            className={`relative cursor-pointer overflow-hidden my-2 shadow-md ${currentCourseSelected - 1 === index ? 'block' : currentCourseSelected === '' ? 'block' : 'hidden'}`}
+                            className={`relative cursor-pointer overflow-hidden shadow-md ${currentCourseSelected - 1 === index ? 'block' : currentCourseSelected === '' ? 'block' : 'hidden'}`}
                             onMouseEnter={() => setOverlay(index)}
                             onMouseLeave={() => setOverlay(null)}
                         >
@@ -37,7 +37,7 @@ const Projects = () => {
                             <img
                                 src={src}
                                 alt={alt}
-                                className='w-full h-full  border border-gray-100'
+                                className='w-full h-full object-contain'
                             />
                             <span
                                 className={` backdrop-blur-[3px] bg-transparent w-full h-full absolute left-0 right-0 top-0 bottom-0 m-auto flex justify-center items-center
