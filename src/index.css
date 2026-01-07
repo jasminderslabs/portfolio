@@ -13,3 +13,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+h1 {
+  font-size: clamp(30px, 5vw, 50px);
+}
+
+.btn-margin {
+  margin-left: clamp(20px, 20vw, 100px);
+  margin-right: clamp(20px, 20vw, 100px);
+}
+
+a {
+  overflow: hidden;
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  left: -200px;
+  bottom: 10px;
+  transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 6px 6px 20px 5px rgba(255, 255, 255, 0.5),
+    -6px -6px 20px 5px rgba(255, 255, 255, 0.5);
+  animation: shimmer 1.5s ease-out 0.5s infinite;
+}
+
+@keyframes shimmer {
+  from {
+    transform: translateX(0px) translateY(0px) rotate(45deg);
+  }
+  to {
+    transform: translateX(500px) translateY(-100%) rotate(45deg);
+  }
+}
