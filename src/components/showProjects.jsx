@@ -9,7 +9,7 @@ const Projects = () => {
         'Form Validation',
         'Calculator App',
         'Grocery List App',
-        'Course 5',
+        'Quote Generator',
         'Course 6',
         'Course 7'
     ];
@@ -23,7 +23,7 @@ const Projects = () => {
                 names={courseNames}
                 value={currentCourseSelected}
                 setValue={setCurrentCourseSelected} />
-            <div className={`${currentCourseSelected === '' ? 'grid grid-cols-1 lg:grid-cols-2 gap-20' : null}  py-10 mx-10`}>
+            <div className={`${currentCourseSelected === '' ? 'grid grid-cols-1 lg:grid-cols-2 gap-10' : null}  py-10 mx-10`}>
 
                 {
                     portfolioImages.map(({ src, alt, link }, index) => {

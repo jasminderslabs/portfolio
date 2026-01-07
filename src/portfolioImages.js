@@ -19,4 +19,9 @@ export const portfolioImages = [
     alt: "grocery-list-project-image",
     link: "https://workdrive.zoho.com/folder/l33swa114cb0e43454ce98ef62fe30efbe4ac",
   },
+  {
+    src: "/portfolioProject5.png",
+    alt: "quote-project-image",
+    link: "https://workdrive.zoho.com/folder/l33sw9cb7c90abc8541c39eb6001b9259d982",
+  },
 ];
