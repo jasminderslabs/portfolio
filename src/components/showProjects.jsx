@@ -7,8 +7,8 @@ const Projects = () => {
         'Show All',
         'Responsive web design',
         'Form Validation',
-        'Calculator',
-        'Course 4',
+        'Calculator App',
+        'Grocery List App',
         'Course 5',
         'Course 6',
         'Course 7'
