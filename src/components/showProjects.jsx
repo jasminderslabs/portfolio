@@ -13,6 +13,7 @@ const Projects = () => {
         'Weather App',
         'Subly',
         'Landing Page',
+        'Markdown Preview'
     ];
     const [currentCourseSelected, setCurrentCourseSelected] = useState('');
     const [showOverlay, setOverlay] = useState(null)
