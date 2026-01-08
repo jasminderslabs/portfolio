@@ -34,4 +34,9 @@ export const portfolioImages = [
     alt: "subly-project-image",
     link: "https://workdrive.zoho.com/folder/i74vj63e131775bb3453a9a9025103a433e17",
   },
+  {
+    src: "/portfolioProject8.png",
+    alt: "landing-project-image",
+    link: "https://workdrive.zoho.com/folder/i74vjac27afac2f75476fb6f8e4f11c139ec5",
+  },
 ];

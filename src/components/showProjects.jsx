@@ -11,7 +11,8 @@ const Projects = () => {
         'Grocery List App',
         'Quote Generator',
         'Weather App',
-        'Subly'
+        'Subly',
+        'Landing Page',
     ];
     const [currentCourseSelected, setCurrentCourseSelected] = useState('');
     const [showOverlay, setOverlay] = useState(null)
