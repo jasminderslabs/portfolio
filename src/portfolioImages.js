@@ -44,4 +44,9 @@ export const portfolioImages = [
     alt: "landing-project-image",
     link: "https://workdrive.zoho.com/folder/i74vj41c3a50f90ef468ab177d2c240af88ff",
   },
+  {
+    src: "/portfolioProject10.png",
+    alt: "asthma-survey-app-image",
+    link: "https://sookshumlabs1.retool.com/embedded/public/cd055abc-92a0-4884-a6ef-3cca619e7e0d",
+  },
 ];
