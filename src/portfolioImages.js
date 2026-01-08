@@ -24,4 +24,9 @@ export const portfolioImages = [
     alt: "quote-project-image",
     link: "https://workdrive.zoho.com/folder/l33sw9cb7c90abc8541c39eb6001b9259d982",
   },
+  {
+    src: "/portfolioProject6.png",
+    alt: "weather-project-image",
+    link: "https://workdrive.zoho.com/folder/i74vjb95dfc7967d443a0bcefe27c58727718",
+  },
 ];

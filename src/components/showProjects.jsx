@@ -10,7 +10,7 @@ const Projects = () => {
         'Calculator App',
         'Grocery List App',
         'Quote Generator',
-        'Course 6',
+        'Weather App',
         'Course 7'
     ];
     const [currentCourseSelected, setCurrentCourseSelected] = useState('');
