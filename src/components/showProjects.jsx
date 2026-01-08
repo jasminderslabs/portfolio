@@ -11,7 +11,7 @@ const Projects = () => {
         'Grocery List App',
         'Quote Generator',
         'Weather App',
-        'Course 7'
+        'Subly'
     ];
     const [currentCourseSelected, setCurrentCourseSelected] = useState('');
     const [showOverlay, setOverlay] = useState(null)
@@ -23,12 +23,12 @@ const Projects = () => {
                 names={courseNames}
                 value={currentCourseSelected}
                 setValue={setCurrentCourseSelected} />
-            <div className={`${currentCourseSelected === '' ? 'grid grid-cols-1 lg:grid-cols-2 gap-10' : null}  py-10 mx-10`}>
+            <div className={`${currentCourseSelected === '' ? 'grid grid-cols-1 lg:grid-cols-2 gap-10' : null}  py-10 mx-10 relative z-3 bg-white`}>
 
                 {
                     portfolioImages.map(({ src, alt, link }, index) => {
                         return <div key={index}
-                            className={`relative cursor-pointer overflow-hidden shadow-md ${currentCourseSelected - 1 === index ? 'block' : currentCourseSelected === '' ? 'block' : 'hidden'}`}
+                            className={`relative z-1 cursor-pointer overflow-hidden shadow-md ${currentCourseSelected - 1 === index ? 'block' : currentCourseSelected === '' ? 'block' : 'hidden'}`}
                             onMouseEnter={() => setOverlay(index)}
                             onMouseLeave={() => setOverlay(null)}
                         >
@@ -58,7 +58,7 @@ const Projects = () => {
 }
 const Buttons = ({ names, value, setValue }) => {
     return (
-        <div className='w-full mt-10 flex justify-center items-center sticky top-0 backdrop-blur-sm bg-transparent'>
+        <div className='w-full mt-10 flex justify-center items-center sticky top-0 backdrop-blur-sm bg-transparent -z-1'>
             {/* Buttons for specific courses */}
             <div className={`gap-10 flex items-center p-2 overflow-auto`}>
                 {
