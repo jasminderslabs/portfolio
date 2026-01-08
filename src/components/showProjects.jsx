@@ -14,7 +14,8 @@ const Projects = () => {
         'Subly',
         'Landing Page',
         'Markdown Preview',
-        "Asthma Survey App"
+        "Asthma Survey App",
+        "ICS Admin App"
     ];
     const [currentCourseSelected, setCurrentCourseSelected] = useState('');
     const [showOverlay, setOverlay] = useState(null)

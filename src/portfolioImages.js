@@ -49,4 +49,9 @@ export const portfolioImages = [
     alt: "asthma-survey-app-image",
     link: "https://sookshumlabs1.retool.com/embedded/public/cd055abc-92a0-4884-a6ef-3cca619e7e0d",
   },
+  {
+    src: "/portfolioProject11.png",
+    alt: "ics-admin-app-image",
+    link: "https://sookshumlabs1.retool.com/embedded/public/566346d3-3e65-4916-9df1-d0e983b12932",
+  },
 ];
