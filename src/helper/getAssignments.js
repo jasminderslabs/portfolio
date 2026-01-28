@@ -5,7 +5,9 @@ import { getAllUsers } from "./getAllUsers";
 
 export const getAssignments = async () => {
   try {
-    const { uid, roles } = JSON.parse(sessionStorage.getItem("user"));
+    const { uid, roles, email, username } = JSON.parse(
+      sessionStorage.getItem("user"),
+    );
 
     const collectionRef = collection(db, "assignment-users", uid, "courses");
     const docs = await getDocs(collectionRef);
@@ -21,6 +23,9 @@ export const getAssignments = async () => {
       const url = await getCoverImage(assignment.assignmentCoverImage);
       return {
         ...assignment,
+        email,
+        username,
+        roles,
         assignmentCoverImage: url,
       };
     });

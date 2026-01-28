@@ -13,6 +13,7 @@ const Projects = () => {
     const [deleting, setDeleting] = useState(false)
     const [currentSelected, setCurrentSelected] = useState(-1);
 
+    console.log(currentAssignments)
     const handleDeleteAssignment = async (uid, courseName, assignmentName, index) => {
         try {
             setDeleting(true);
@@ -40,6 +41,7 @@ const Projects = () => {
             setCurrentAssignments(organizeCourses(AllAssignments));
         }
     }, [AllAssignments]);
+
 
     return (
         <>
@@ -70,7 +72,9 @@ const Projects = () => {
                                     className={`flex flex-col justify-center p-10 w-full h-[30%]  bg-linear-to-b from-transparent to-white/40 absolute bottom-0`}
                                 >
                                     <span className='text-white text-xl font-extrabold bg-black w-fit opacity-50 p-2 block'>{courseName}</span>
-                                    <span className='text-white font-bold bg-black w-fit opacity-50 p-2 block'>{assignmentName}</span>
+                                    <span className='text-white font-bold bg-black w-fit opacity-50 p-2 block'>
+                                        <a href={assignmentLink} target='_blank'>{assignmentName}</a>
+                                    </span>
 
                                 </span>
                             </div>
@@ -89,7 +93,9 @@ const Projects = () => {
                                     className={`flex flex-col justify-center p-10 w-full h-[30%]  bg-linear-to-b from-transparent to-white/40 absolute bottom-0`}
                                 >
                                     <span className='text-white text-xl font-extrabold bg-black w-fit opacity-50 p-2 block'>{courseName}</span>
-                                    <span className='text-white font-bold bg-black w-fit opacity-50 p-2 block'>{assignmentName}</span>
+                                    <span className='text-white font-bold bg-black w-fit opacity-50 p-2 block'>
+                                        <a href={assignmentLink} target='_blank'>{assignmentName}</a>
+                                    </span>
 
                                 </span>
                             </div>

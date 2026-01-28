@@ -4,7 +4,7 @@ import {storeAssignment} from "../helper/storeAssignment";
 import {useNavigate} from "react-router-dom";
 
 const CreateAssignment = () => {
-    const {setAllAssignments} = useContext(GlobalData);
+    const {setAllAssignments, user} = useContext(GlobalData);
     const [coverImage, setCoverImage] = useState(null);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false)
@@ -60,6 +60,7 @@ const CreateAssignment = () => {
                     ...prev,
                     {
                         ...formData,
+                        ...user,
                         id: prev.length + 1
                     }
                 ]))
