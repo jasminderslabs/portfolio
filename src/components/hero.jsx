@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import {motion} from 'motion/react'
 
 const animate = {
 
@@ -16,7 +16,7 @@ const Hero = () => {
 
     return (
         <div className=' relative w-full min-h-[50vh] border bg-linear-to-br from-blue-600 to-purple-500 flex justify-center items-center '>
-            <motion.img
+            {/* <motion.img
                 src='/html.png'
                 alt='html-logo'
                 height={40}
@@ -51,7 +51,7 @@ const Hero = () => {
                 className='absolute  left-[25%] top-[55%] -rotate-12 opacity-80  shadow-sm '
                 animate={animate}
                 transition={transition}
-            />
+            /> */}
 
             <div className='w-full md:w-[50%] z-2'>
                 <motion.span className='text-xl md:text-2xl text-white text-center w-full inline-block mb-10 font-bold'

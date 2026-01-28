@@ -3,14 +3,14 @@ import {GlobalData} from '../context/globalData';
 import {organizeCourses} from '../helper/organizeCourses';
 import {deleteAssignment} from '../helper/deleteAssignment';
 
-const Projects = () => {
+const AllAssignments = () => {
 
     const [currentCourseSelected, setCurrentCourseSelected] = useState('');
     const {AllAssignments, isAdmin, user, setAllAssignments} = useContext(GlobalData);
     const [courseNames, setCourseNames] = useState([]);
     const [currentAssignments, setCurrentAssignments] = useState({}); // when user clicks specific courses button then corresponding all assignments will be render.
-    const [currentCourseName, setCurrentCourseName] = useState('')
-    const [deleting, setDeleting] = useState(false)
+    const [currentCourseName, setCurrentCourseName] = useState('');
+    const [deleting, setDeleting] = useState(false);
     const [currentSelected, setCurrentSelected] = useState(-1);
 
     const handleDeleteAssignment = async (uid, courseName, assignmentName, index) => {
@@ -26,12 +26,11 @@ const Projects = () => {
 
         }
     }
-
     useEffect(() => {
         if(user && AllAssignments) {
             const courseNameSet = new Set();
             AllAssignments.forEach((assignment) => {
-                if(assignment.courseName && user.email === assignment.email) {
+                if(assignment.courseName) {
                     courseNameSet.add(assignment.courseName?.toLowerCase())
                 }
             });
@@ -52,9 +51,9 @@ const Projects = () => {
                 {
                     currentCourseName === '' ?
                         AllAssignments?.map(({
-                            assignmentCoverImage, assignmentLink, assignmentName, courseName, uid, email
+                            assignmentCoverImage, assignmentLink, assignmentName, courseName, uid
                         }, index) => {
-                            return <div key={index} className={`border place-content-center relative ${ courseName ? "block" : 'hidden' } ${ user.email === email ? 'block' : 'hidden' } `}>
+                            return <div key={index} className={`border place-content-center relative ${ courseName ? "block" : 'hidden' } `}>
                                 <span className='flex  gap-2 justify-end items-center p-5 absolute top-0 w-full  bg-linear-to-b from-white/10 to-transparent'>
                                     <span className='text-white font-bold bg-black w-fit cursor-pointer p-2 block'
                                         onClick={() => handleDeleteAssignment(uid, courseName, assignmentName, index)}>
@@ -75,14 +74,13 @@ const Projects = () => {
                                 </span>
                             </div>
                         })
-                        : currentAssignments[currentCourseName].map(({
-                            assignmentCoverImage, assignmentLink, assignmentName, courseName, uid, email
+                        : currentAssignments[currentCourseName]?.map(({
+                            assignmentCoverImage, assignmentLink, assignmentName, courseName, uid
                         }, index) => {
-                            return <div key={index} className={`${ user.email === email ? 'block' : 'hidden' } border place-content-center relative`}>
+                            return <div key={index} className={`border place-content-center relative`}>
                                 <span className='flex  gap-2 justify-end items-center p-5 absolute top-0 w-full  bg-linear-to-b from-white/10 to-transparent'>
                                     <span className='text-white font-bold bg-black w-fit cursor-pointer p-2 block'
-                                        onClick={() => deleteAssignment(uid, courseName, assignmentName)}
-                                    >Delete</span>
+                                        onClick={() => handleDeleteAssignment(uid, courseName, assignmentName)}>Delete</span>
                                 </span>
                                 <img src={assignmentCoverImage || null} className='object-fill w-full h-full' />
                                 <span
@@ -132,4 +130,4 @@ const Buttons = ({names, value, setValue, setCurrentCourseName}) => {
         </div>
     )
 }
-export default Projects
+export default AllAssignments
