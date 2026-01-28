@@ -13,7 +13,6 @@ const Projects = () => {
     const [deleting, setDeleting] = useState(false)
     const [currentSelected, setCurrentSelected] = useState(-1);
 
-    console.log(currentAssignments)
     const handleDeleteAssignment = async (uid, courseName, assignmentName, index) => {
         try {
             setDeleting(true);

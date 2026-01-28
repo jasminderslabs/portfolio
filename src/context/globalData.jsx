@@ -18,6 +18,7 @@ const ContextProvider = ({children}) => {
             const logged = sessionStorage.getItem('logged') || false;
             const getUser = sessionStorage.getItem('user') ? JSON.parse(sessionStorage.getItem('user')) : null
             if(logged && getUser) {
+
                 setLoggedIn(true);
                 setUser(getUser)
                 const assignments = getUser.roles?.[1] === 'admin' ? await getAllUsers() : await getAssignments();
@@ -36,6 +37,8 @@ const ContextProvider = ({children}) => {
             if(user.roles?.[1] === "admin") {
                 setAllAssignments(await getAllUsers());
                 setIsAdmin(true);
+            } else {
+                setAllAssignments(await getAssignments());
             }
         })();
     }, [user]);
